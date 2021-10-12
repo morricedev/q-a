@@ -16,6 +16,8 @@ class App {
   middlewares() {
     this.app.set("view engine", "ejs");
     this.app.use(express.static(resolve(__dirname, "public")));
+    this.app.use(express.urlencoded({ extended: true }));
+    this.app.use(express.json());
   }
 
   routes() {
