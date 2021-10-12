@@ -1,8 +1,10 @@
 const { Router } = require("express");
 const router = new Router();
 
-router.get("/", (req, res) => {
-  res.render("ask");
-});
+const askController = require("../controllers/Ask");
+
+router.get("/", askController.index);
+
+router.post("/store", askController.store);
 
 module.exports = router;
