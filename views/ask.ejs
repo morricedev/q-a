@@ -1,26 +1,24 @@
-<%- include('partials/header.ejs') %> 
-<body>
-  <%- include('partials/navbar.ejs') %> 
-  <div class="container">
-    <div class="card mt-5">
-      <div class="card-header">
-        <h3>Realizar pergunta</h3>
-      </div>
-      <div class="card-body">
-        <form method="post" action="/ask/store">
-          <label for="title">Título</label>
-          <input id="title" name="title" class="form-control mb-3" type="text" placeholder="Como tiro minha CNH?">
+<%- include('partials/header.ejs') %>
+  <%- include('partials/navbar.ejs') %>
+    <div class="container">
+      <div class="card mt-5">
+        <div class="card-header">
+          <h3>Realizar pergunta</h3>
+        </div>
+        <div class="card-body">
+          <form method="post" action="/ask/store">
+            <label for="title">Título</label>
+            <input id="title" name="title" class="form-control mb-3" type="text" placeholder="Como tiro minha CNH?">
 
-          <label for="description">Descrição</label>
-          <textarea id="description" name="description" class="form-control mb-3"
-            placeholder="Quais documentos eu preciso e em qual orgão devo ir para retirar?"></textarea>
+            <label for="description">Descrição</label>
+            <textarea id="description" name="description" class="form-control mb-3"
+              placeholder="Quais documentos eu preciso e em qual orgão devo ir para retirar?"></textarea>
 
-          <button class="btn btn-primary">Perguntar</button>
-        </form>
+            <button class="btn btn-primary">Perguntar</button>
+          </form>
+        </div>
       </div>
+
     </div>
 
-  </div>
-
-</body>
-<%- include('partials/footer.ejs') %> 
+    <%- include('partials/footer.ejs') %>
