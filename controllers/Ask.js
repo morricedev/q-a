@@ -1,16 +1,14 @@
+const Question = require("../models/Question");
 class AskController {
   async index(req, res) {
-    res.render("ask");
+    return res.render("ask");
   }
-  async show(req, res) {}
-  async store(req, res) {
-    const title = req.body.title;
-    const description = req.body.description;
 
-    res.send(`Form recebido ${title} ${description}`);
+  async store(req, res) {
+    await Question.create(req.body);
+
+    return res.redirect("/");
   }
-  async update(req, res) {}
-  async delete(req, res) {}
 }
 
 module.exports = new AskController();
