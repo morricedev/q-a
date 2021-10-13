@@ -7,6 +7,7 @@ const connection = require("./database");
 
 const homeRoutes = require("./routes/home");
 const askRoutes = require("./routes/ask");
+const questionRoutes = require("./routes/question");
 
 class App {
   constructor() {
@@ -34,7 +35,8 @@ class App {
 
   routes() {
     this.app.use("/", homeRoutes);
-    this.app.use("/ask/", askRoutes);
+    this.app.use("/ask", askRoutes);
+    this.app.use("/question", questionRoutes);
   }
 }
 
