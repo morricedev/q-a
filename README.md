@@ -31,6 +31,9 @@ Para iniciá-lo, siga os passos abaixo:
 # Instalar as dependências
 $ yarn
 
+# Copie o arquivo .env.example, renomeie para .env e então configure suas variáveis de ambiente
+$ cp .env.example .env
+
 # Iniciar o projeto
 $ yarn start
 ```
