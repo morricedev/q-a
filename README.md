@@ -38,7 +38,7 @@ O app estará disponível no seu browser pelo endereço http://localhost:8080.
 
 ## 💻 Projeto
 
-O projeto é um site de perguntas e respostas estilo Ask.fm.
+O projeto é um site para responder e perguntar anonimamente.
 
 ---
 
