@@ -13,6 +13,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React](https://reactjs.org)
 - [Express](https://expressjs.com/)
 - [Sequelize](https://sequelize.org/)
+- [Mysql2](https://www.npmjs.com/package/mysql2)
 - [Bootstrap](https://getbootstrap.com/)
 
 ## 🚀 Como executar
