@@ -1,29 +1,40 @@
-<%- include('partials/header.ejs') %> 
+<%- include('partials/header.ejs') %>
 
-<%- include('partials/navbar.ejs') %> 
-<div class="container">
-  <div class="question text-center">
-    <hr>
-    <h1><%= question.title %></h1>
-    <p><%= question.description %></p>
-    <hr>
-  </div>
+<%- include('partials/navbar.ejs') %>
+    <div class="container">
+      <div class="question text-center">
+        <hr>
+        <h1>
+          <%= question.title %>
+        </h1>
+        <p>
+          <%= question.description %>
+        </p>
+        <hr>
+      </div>
 
-  <form method="post" action="/response/answer">
-    <label for="body">Sua resposta:</label>
-    <textarea placeholder="Digite sua resposta" class="form-control" name="body" id="body"></textarea>
-    <input type="hidden" name="question_id" value="<%= question.id %>">
-    <button type="submit" class="btn btn-primary my-3">Responder</button>
-  </form>
-  <hr>
-  <h3>Respostas</h3>
-  <% responses.forEach(response => { %>
-   <div class="card my-4">
-     <div class="card-body">
-      <p><%= response.body %></p> 
-     </div>
-   </div>
-  <% }) %>
-</div>
+      <form class="needs-validation" method="post" action="/response/answer" novalidate>
+        <label class="form-label" for="body">Sua resposta:</label>
+        <textarea required placeholder="Digite sua resposta" class="form-control mb-3" name="body" id="body"></textarea>
+        <p class="d-none text-danger">
+          Por favor, insira uma resposta.
+        </p>
+        <input type="hidden" name="question_id" value="<%= question.id %>">
 
-<%- include('partials/footer.ejs') %> 
+        <button type="submit" class="btn btn-primary my-3">Responder</button>
+      </form>
+      <hr>
+      <h3>Respostas</h3>
+      <% responses.forEach(response=> { %>
+        <div class="card my-4">
+          <div class="card-body">
+            <p>
+              <%= response.body %>
+            </p>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+    <script type="module" src="/js/index.js"></script>
+
+    <%- include('partials/footer.ejs') %>
